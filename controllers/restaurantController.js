@@ -15,7 +15,7 @@ module.exports = {
             await newRestaurant.save();
             res.status(201).json({status: true, message: 'Restaurant created successfully',});
         } catch (error) {
-            
+            res.status(500).json({status: false, message: error.message,});
         }
     },
 
